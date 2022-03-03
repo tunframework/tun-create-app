@@ -1,0 +1,32 @@
+{
+  // https://github.com/TypeStrong/ts-node#via-tsconfigjson-recommended
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // It is faster to skip typechecking.
+    // Remove if you want ts-node to do typechecking.
+    "transpileOnly": true,
+    "files": true,
+    "compilerOptions": {
+      // compilerOptions specified here will override those declared below,
+      // but *only* in ts-node.  Useful if you want ts-node and tsc to use
+      // different options with a single tsconfig.json.
+    }
+  },
+
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "target": "ESNext",
+    "module": "ESNext",
+    "rootDir": "src",
+    // emit to lib/types via option: tsc ... --outDir lib/types --declaration
+    // "declaration": true,
+    "outDir": "lib/esm",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["tests", "lib"]
+}
