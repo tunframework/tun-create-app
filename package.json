@@ -6,6 +6,7 @@
   "types": "lib/types/index.d.ts",
   "module": "lib/esm/index.js",
   "scripts": {
+    "dev": "node --loader=ts-node/esm ./src/index.ts",
     "lint": "eslint {src,tests}/**",
     "build": "tsc -p tsconfig.json --incremental && tsc -p tsconfig-cjs.json --incremental && echo \"{}\" && tsc -p tsconfig.json --incremental --outDir lib/types --declaration --emitDeclarationOnly && echo {\"type\": \"commonjs\"} > ./lib/cjs/package.json",
     "test": "ts-mocha -n loader=ts-node/esm -p tsconfig.json tests/**/*.test.ts",
@@ -75,5 +76,9 @@
       "eslint --ext .ts"
     ]
   },
-  "packageManager": "pnpm@6.30.0"
+  "packageManager": "pnpm@6.30.0",
+  "dependencies": {
+    "@tunframework/tun-bodyparser": "^2.0.5",
+    "@tunframework/tun-rest-router": "^2.0.2"
+  }
 }
