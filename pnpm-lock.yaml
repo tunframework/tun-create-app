@@ -3,9 +3,10 @@ lockfileVersion: 5.3
 specifiers:
   '@commitlint/cli': ^16.2.1
   '@commitlint/config-conventional': ^16.2.1
-  '@tunframework/tun': ^2.0.5
+  '@tunframework/tun': ^2.0.6
   '@tunframework/tun-bodyparser': ^2.0.5
   '@tunframework/tun-rest-router': ^2.0.2
+  '@tunframework/tun-statics': ^2.0.2
   '@types/mocha': ^9.1.0
   '@types/node': ^17.0.21
   '@typescript-eslint/eslint-plugin': ^5.12.1
@@ -25,13 +26,14 @@ specifiers:
   typescript: ^4.5.5
 
 dependencies:
+  '@tunframework/tun': registry.npmjs.org/@tunframework/tun/2.0.6
   '@tunframework/tun-bodyparser': registry.npmjs.org/@tunframework/tun-bodyparser/2.0.5
   '@tunframework/tun-rest-router': registry.npmjs.org/@tunframework/tun-rest-router/2.0.2
+  '@tunframework/tun-statics': registry.npmjs.org/@tunframework/tun-statics/2.0.2
 
 devDependencies:
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/16.2.1
   '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/16.2.1
-  '@tunframework/tun': registry.npmjs.org/@tunframework/tun/2.0.5
   '@types/mocha': registry.npmmirror.com/@types/mocha/9.1.0
   '@types/node': registry.npmmirror.com/@types/node/17.0.21
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.13.0_33fffc354ccfa91fbe7d1677b9395a0a
@@ -142,12 +144,19 @@ packages:
       - '@swc/wasm'
     dev: false
 
-  registry.npmjs.org/@tunframework/tun/2.0.5:
-    resolution: {integrity: sha512-JtgNNWwBten16Eaubqf4q+2ExXxV5mj89geuyIOKz7OCG/OQueElnVct4KLI+3t2DUAdWn8VVo9JSsM8k4tXIQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@tunframework/tun/-/tun-2.0.5.tgz}
-    name: '@tunframework/tun'
-    version: 2.0.5
+  registry.npmjs.org/@tunframework/tun-statics/2.0.2:
+    resolution: {integrity: sha512-SY+flTwPTI7Kj/bnKrv83wrx7TVe1rALWVrlIE7/fpsaYSQSrD8l/5FrsTZMGTPKDlXuWb5oMbbzowMIhNS3/g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@tunframework/tun-statics/-/tun-statics-2.0.2.tgz}
+    name: '@tunframework/tun-statics'
+    version: 2.0.2
     engines: {node: '>=12.2.0'}
-    dev: true
+    dev: false
+
+  registry.npmjs.org/@tunframework/tun/2.0.6:
+    resolution: {integrity: sha512-Zy8a+P3fbPVdn0Xf2KXtsOx6aUmtt6OVXDmJCFNqb+SVaeurQ9Bmaxca4mp6RFopgDRta+bg85etC3l6tBXFFg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@tunframework/tun/-/tun-2.0.6.tgz}
+    name: '@tunframework/tun'
+    version: 2.0.6
+    engines: {node: '>=12.2.0'}
+    dev: false
 
   registry.npmmirror.com/@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/code-frame/-/code-frame-7.16.7.tgz}
